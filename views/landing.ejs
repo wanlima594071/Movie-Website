@@ -1,0 +1,52 @@
+<% include ./partial/header.ejs %>
+
+
+<div class= "ui huge header">
+	Welcome to Wanli's Movie Database
+</div>
+<h3 class="welcome">
+	You can upload, edit, and share a movie post here!
+</h3>
+
+<div class="ui main text container segment">
+	
+	<div class="ui top attached segment">
+		
+		<div class="ui divided items">
+		
+			<% for (i=0; i < blogs.length; i++){ %>
+				<div class="item">
+					
+					<div class="image">
+						<img src=" <%= blogs[i].image %> ">
+					</div>
+					
+					<div class="content">
+						
+						<a class="header" href="/blogs/<%= blogs[i]._id %>"> <%= blogs[i].title %> </a>
+						<div class="description">
+							<%-  blogs[i].body.slice(0,50) %>...
+						</div>
+						
+						<div class="extra">
+							<a class="ui floated basic  button" href="/blogs/<%= blogs[i]._id %>">Read More</a>
+							<i class="right chevron icon"></i>
+						</div>
+					</div>
+
+					
+					
+					
+				</div>
+			<%	}%>
+		
+		</div>			
+				
+	</div>
+	
+	
+</div>	
+	
+
+<% include ./partial/footer.ejs %>
+

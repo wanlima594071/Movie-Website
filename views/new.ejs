@@ -1,0 +1,30 @@
+<% include ./partial/header.ejs %>
+
+
+<div class="ui main text container segment">
+	<div class= "ui huge header">
+		Add a New Movie Post
+	</div>
+	<p>
+		
+	</p>
+	
+	<form class= "ui form" action="/blogs" method="POST">
+		<div class="field">
+			<label>Movie Name</label>
+		<input type="text" name="blog[title]" placeholder= "movie name">
+		</div>
+		<div class="field">
+			<label>Movie Poster</label>
+		<input type="text" name="blog[image]" placeholder= "add an image address">
+		</div>
+		<div class="field">
+			<label>Movie Description</label>
+			<textarea name="blog[body]"></textarea>
+		</div>
+		<input  class = "ui green basic button" type="submit">
+	</form>																				  
+</div>
+
+
+<% include ./partial/footer.ejs %>
